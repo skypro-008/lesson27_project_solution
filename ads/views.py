@@ -79,7 +79,7 @@ class AdView(View):
             price=ad_data["price"],
             description=ad_data["description"],
             address=ad_data["address"],
-            published=ad_data["published"],
+            is_published=ad_data["is_published"],
         )
 
         return JsonResponse({
@@ -89,7 +89,7 @@ class AdView(View):
             "price": ad.price,
             "description": ad.description,
             "address": ad.address,
-            "published": ad.published,
+            "is_published": ad.is_published,
         })
 
 
@@ -106,5 +106,5 @@ class AdDetailView(DetailView):
             "price": ad.price,
             "description": ad.description,
             "address": ad.address,
-            "published": ad.published,
+            "is_published": ad.is_published,
         })
